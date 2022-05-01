@@ -37,11 +37,7 @@ def conv1x1(in_planes, out_planes, stride=1):
 
 
 class P1ECALayer(nn.Module):
-    """Constructs a ECA module.
-    Args:
-        channel: Number of channels of the input feature map
-        k_size: Adaptive selection of kernel size
-    """
+
 
     def __init__(self, channel):
         super(P1ECALayer, self).__init__()
@@ -75,11 +71,7 @@ class P1ECALayer(nn.Module):
         return x * y.expand_as(x)
 
 class P2ECALayer(nn.Module):
-    """Constructs a ECA module.
-    Args:
-        channel: Number of channels of the input feature map
-        k_size: Adaptive selection of kernel size
-    """
+
 
     def __init__(self, channel, k_size=3):
         super(P2ECALayer, self).__init__()
